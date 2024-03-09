@@ -1,15 +1,41 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      margin: const EdgeInsets.all(20.0),
+      child: Column(
+        children: [
+
+        ],
+      )
+    );
   }
+
+  Widget emailField() {
+    return const TextField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        hintText: 'you@example.com',
+        labelText: 'Email Address',
+      ),
+    );
+  }
+
+  Widget passwordField() {
+    return const TextField(
+      // obscureText: true,
+      decoration: InputDecoration(
+        hintText: 'Password',
+        labelText: 'Password',
+      ),
+    );
+  }
+
+  // Widget submitButton() {
+  //   return Raised
+  // }
 }
