@@ -19,12 +19,16 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget emailField() {
-    return const TextField(
+    return TextField(
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: 'you@example.com',
         labelText: 'Email Address',
+        errorText: bloc.emailController.stream
       ),
+      onChanged: (newValue) {
+        bloc.emailController.sink.add(newValue);
+      },
     );
   }
 
