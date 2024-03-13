@@ -9,7 +9,10 @@ class LoginScreen extends StatelessWidget {
       margin: const EdgeInsets.all(20.0),
       child: Column(
         children: [
-
+          emailField(),
+          passwordField(),
+          const SizedBox(height: 20.0),
+          submitButton() 
         ],
       )
     );
@@ -35,7 +38,13 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  // Widget submitButton() {
-  //   return ElevatedButton(onPressed: onPressed, child: child);
-  // }
+  Widget submitButton() {
+    return ElevatedButton(
+      onPressed: () {},
+      child: const Text(
+        'login',
+        style: TextStyle(color: Colors.white, backgroundColor: Colors.lightBlue)
+      ),
+    );
+  }
 }
